@@ -8,6 +8,10 @@
     scroll-behavior: smooth;
 }
 
+html {
+    background-color: #2b1055;
+}
+
 body {
     min-height: 100vh;
     background: linear-gradient(#2b1055, #7597de);
@@ -181,7 +185,7 @@ body {
         -5px -5px -5px rgba(0, 0, 0, 0.05),
         -5px -5px -5px rgba(255, 255, 255, 0.5);
     border-radius: 15px;
-    margin: 15px;
+    margin: 0;
 }
 .contact-list .card a {
     position: absolute;
@@ -258,12 +262,15 @@ body {
     padding: 20px;
     text-align: center;
     transform: translateY(100px);
-    opacity: 0;
     transition: 0.5s;
 }
 
 .animations__list .card:hover .content {
     transform: translateY(0px);
+}
+
+.animations__list .card:hover .content p,
+.animations__list .card:hover .content a {
     opacity: 1;
 }
 
@@ -286,6 +293,8 @@ body {
     font-size: 1em;
     color: #fff;
     font-weight: 300;
+    opacity: 0;
+    transition: 0.5s;
 }
 
 .animations__list .card .content a {
@@ -299,4 +308,6 @@ body {
     text-decoration: none;
     font-weight: 500;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: 0.5s;
 }
